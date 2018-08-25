@@ -3,6 +3,7 @@ class QueueEmptyException(Exception):
     An exception when a queue is empty
     '''
 
+
 class Queue():
 
     def __init__(self):
@@ -11,7 +12,6 @@ class Queue():
 
         Initializes a container that is first-in first-out
         '''
-
 
     def __str__(self):
         '''
@@ -33,8 +33,9 @@ class Queue():
 
         Removes and returns the earliest object that entered the queue. This
         method mutates the Queue
-        '''
 
+        RAISES QueueEmptyException if the queue is empty
+        '''
 
     def is_empty(self):
         '''
