@@ -52,7 +52,7 @@ class TestQueue(unittest.TestCase):
         # enqueue an item to our generic queue
         self.generic_q.enqueue("object")
         # then test if it is empty
-        self.seertFalse(self.generic_q.is_empty())
+        self.assertFalse(self.generic_q.is_empty())
 
     def test_dequeue_empty(self):
         # assume that our initialized queue is empty
@@ -82,5 +82,6 @@ class TestQueue(unittest.TestCase):
         # as the expected values
         self.assertEqual(actual_first, expected_first)
         self.assertEqual(actual_second, expected_second)
-if __name__ == '__main__':
+
+if __name__ == '__main__':
     unittest.main(exit=False)
