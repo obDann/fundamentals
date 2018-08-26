@@ -108,8 +108,3 @@ class Queue():
         '''
         # as per our representation invariant, the queue is empty iff
         return self._q == []
-
-a = Queue()
-for i in range(5):
-    a.enqueue(i)
-print(a)
