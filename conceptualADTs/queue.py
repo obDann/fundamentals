@@ -64,12 +64,12 @@ class Queue():
             ret = self._q[curr_index].__str__() + "\n---"
         # RD: an arbitrary element
         else:
-            # get the current element's string representation
+            # get the current (older) element's string representation
             curr = self._q[curr_index].__str__() + "\n---"
             # decrement the index
             curr_index -= 1
-            # then we want to get the previous elements to put below
-            # current element's string representation
+            # then we want to get the newer elements to put below
+            # old element's string representation
             below = self._str_helper(curr_index)
             # then bind the stack of elements with a new line
             ret = curr + "\n" + below
@@ -108,3 +108,8 @@ class Queue():
         '''
         # as per our representation invariant, the queue is empty iff
         return self._q == []
+
+a = Queue()
+for i in range(5):
+    a.enqueue(i)
+print(a)
