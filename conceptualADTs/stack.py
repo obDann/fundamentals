@@ -95,7 +95,7 @@ class Stack():
         if (self.is_empty()):
             # if it is, then we want to raise an error
             raise StackEmptyException("There are no elements in the stack"
-                                      + " to pop from")
+                                      + " to pop")
         # otherwise, we can assume that there are elements in the stack
         # so we can just pop it
         return self._stk.pop()
