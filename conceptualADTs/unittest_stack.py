@@ -8,9 +8,9 @@ class TestStack(unittest.TestCase):
         # create a generic stack
         self.generic_stk = Stack()
         # and create a few objects
-        first_obj = "Object!"
-        second_obj = 2
-        third_obj = False
+        self.first_obj = "Object!"
+        self.second_obj = 2
+        self.third_obj = False
 
     def test_stack_initialization(self):
         # create a basic stack
@@ -20,7 +20,7 @@ class TestStack(unittest.TestCase):
 
     def test_stack_empty(self):
         # check if the generic stack is empty
-        assertTrue(self.generic_stk.is_empty())
+        self.assertTrue(self.generic_stk.is_empty())
 
     def test_stack_empty_via_string(self):
         # make an expected output
@@ -28,7 +28,7 @@ class TestStack(unittest.TestCase):
         # get the actual output
         actual = self.generic_stk.__str__()
         # check if the expected is equal to the actual
-        assertEqual(actual, expected)
+        self.assertEqual(actual, expected)
 
     def test_stack_empty_via_pop(self):
         # the generic stack is empty on intialization, so just pop it
@@ -36,13 +36,13 @@ class TestStack(unittest.TestCase):
 
     def test_push_once_is_empty(self):
         # add an object to the stack
-        self.generic_stk.push(first_obj)
+        self.generic_stk.push(self.first_obj)
         # then test whether or not it is empty
         self.assertFalse(self.generic_stk.is_empty())
 
     def test_push_once_via_string(self):
         # add an object to the stack
-        self.generic_stk.push(first_obj)
+        self.generic_stk.push(self.first_obj)
         # make an expected string
         expected = "Object!\n---"
         # then get the actual string
@@ -52,7 +52,7 @@ class TestStack(unittest.TestCase):
 
     def test_push_once_via_pop(self):
         # set an expected object
-        expected = first_obj
+        expected = self.first_obj
         # add the object to the stack
         self.generic_stk.push(expected)
         # then pop the object out of the stack
@@ -62,15 +62,15 @@ class TestStack(unittest.TestCase):
 
     def test_push_twice_is_empty(self):
         # add two objects to the stack
-        self.generic_stk.push(first_obj)
-        self.generic_stk.push(second_obj)
+        self.generic_stk.push(self.first_obj)
+        self.generic_stk.push(self.second_obj)
         # then test whether the stack is empty
         self.assertFalse(self.generic_stk.is_empty())
 
     def test_push_twice_via_string(self):
         # add two objects to the stack
-        self.generic_stk.push(first_obj)
-        self.generic_stk.push(second_obj)
+        self.generic_stk.push(self.first_obj)
+        self.generic_stk.push(self.second_obj)
         # create a string where the most recent object is on the top
         expected = "2\n---\nObject!\n---"
         # then get the actual string representation
@@ -80,25 +80,25 @@ class TestStack(unittest.TestCase):
 
     def test_push_twice_via_pop_once(self):
         # add two objects to the stack
-        self.generic_stk.push(first_obj)
-        self.generic_stk.push(second_obj)
+        self.generic_stk.push(self.first_obj)
+        self.generic_stk.push(self.second_obj)
         # the second object is the expected
-        expected = second_obj
+        expected = self.second_obj
         # then pop one object from the stack
         actual = self.generic_stk.pop()
         # check if they are the same object
-        assertEqual(actual, expected)
+        self.assertEqual(actual, expected)
         # then check if the stack is not empty
         self.assertFalse(self.generic_stk.is_empty())
 
     def test_push_twice_via_pop_twice(self):
         # add two objects to the stack
-        self.generic_stk.push(first_obj)
-        self.generic_stk.push(second_obj)
+        self.generic_stk.push(self.first_obj)
+        self.generic_stk.push(self.second_obj)
         # the second object is the first object expected to be popped
-        expected_first = second_obj
+        expected_first = self.second_obj
         # followed by the first object...
-        expected_second = first_obj
+        expected_second = self.first_obj
 
         # get both objects from the stack
         actual_first = self.generic_stk.pop()
@@ -112,9 +112,9 @@ class TestStack(unittest.TestCase):
 
     def test_push_three_via_string(self):
         # add three objects to the stack
-        self.generic_stk.push(first_obj)
-        self.generic_stk.push(second_obj)
-        self.generic_stk.push(third_obj)
+        self.generic_stk.push(self.first_obj)
+        self.generic_stk.push(self.second_obj)
+        self.generic_stk.push(self.third_obj)
         # create an expected string representation of the stack
         expected = "False\n---\n2\n---\nObject!\n---"
         # get the actual representation
@@ -124,11 +124,11 @@ class TestStack(unittest.TestCase):
 
     def test_push_three_via_pop_once(self):
         # add three objects to the stack
-        self.generic_stk.push(first_obj)
-        self.generic_stk.push(second_obj)
-        self.generic_stk.push(third_obj)
+        self.generic_stk.push(self.first_obj)
+        self.generic_stk.push(self.second_obj)
+        self.generic_stk.push(self.third_obj)
         # the expected object is the third object
-        expected = third_obj
+        expected = self.third_obj
         # the actual object is what is at the top of the stack
         actual = self.generic_stk.pop()
         # check the equivalence of the two
@@ -138,11 +138,11 @@ class TestStack(unittest.TestCase):
 
     def test_push_three_via_pop_three(self):
         # add three objects to the stack
-        self.generic_stk.push(first_obj)
-        self.generic_stk.push(second_obj)
-        self.generic_stk.push(third_obj)
+        self.generic_stk.push(self.first_obj)
+        self.generic_stk.push(self.second_obj)
+        self.generic_stk.push(self.third_obj)
         # then make a list of expected objects in sequential order
-        expected_list = [third_obj, second_obj, first_obj]
+        expected_list = [self.third_obj, self.second_obj, self.first_obj]
         # go through a while loop
         while (not self.generic_stk.is_empty()):
             # get an expected value
