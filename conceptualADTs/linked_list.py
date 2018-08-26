@@ -97,6 +97,16 @@ class LinkedList():
         0 <= index < number_of_elements
         '''
 
+    def remove(self, index):
+        '''
+        (LinkedList, int) -> None
+
+        Removes an object from the linked list
+
+        RAISES BoundaryException when the index is not in the following range:
+        0 <= index < number_of_elements
+        '''
+
     def is_empty(self):
         '''
         (LinkedList) -> boolean
