@@ -92,6 +92,9 @@ class LinkedList():
         (LinkedList, int) -> obj
 
         Returns the object at the specified index
+
+        RAISES BoundaryException when the index is not in the following range:
+        0 <= index < number_of_elements
         '''
 
     def is_empty(self):
