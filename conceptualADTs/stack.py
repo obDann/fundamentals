@@ -3,6 +3,7 @@ class StackEmptyException(Exception):
     An exception when a stack is empty
     '''
 
+
 class Stack():
 
     def __init__(self):
@@ -11,6 +12,17 @@ class Stack():
 
         Initializes the stack
         '''
+        # REPRESENTATION INVARIANT
+        # stk is a list
+        #
+        # stk is empty when:
+        #     stk == []
+        #
+        # if an object o has been pushed onto the stack:
+        #     stk appends object o (as the last element of the list)
+        #
+        # if an object o is popped from the stack
+        #     stk removes and returns object o from the list
 
     def __str__(self):
         '''
