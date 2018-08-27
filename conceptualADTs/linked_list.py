@@ -84,7 +84,7 @@ class LinkedList():
         Inserts the object at a specified index
 
         RAISES BoundaryException when the index is not in the following range:
-        0 <= index < number_of_elements
+        0 <= index <= number_of_elements
         '''
 
     def get(self, index):
@@ -95,6 +95,7 @@ class LinkedList():
 
         RAISES BoundaryException when the index is not in the following range:
         0 <= index < number_of_elements
+        OR if the linked list is empty
         '''
 
     def remove(self, index):
@@ -105,6 +106,7 @@ class LinkedList():
 
         RAISES BoundaryException when the index is not in the following range:
         0 <= index < number_of_elements
+        OR if the linked list is empty
         '''
 
     def is_empty(self):
