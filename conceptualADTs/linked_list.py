@@ -63,17 +63,17 @@ class LinkedList():
         '''
         # REPRESENTATION INVARIANT
         #
-        # self._num_ele is the number of nodes there are in the linked
+        # _num_ele is the number of nodes there are in the linked
         # list
         #
-        # self._head is either None or a node
-        # self._tail is either None or a node
-        # if self._head is None:
+        # _head is either None or a node
+        # _tail is either None or a node
+        # if _head is None:
         #     the linked list is empty
-        #     self._tail is None
+        #     _tail is None
         # otherwise:
-        #     self._head is the first node of the linked list
-        #     self._tail is the last node of the linked list
+        #     _head is the first node of the linked list
+        #     _tail is the last node of the linked list
         #     if node A is placed before node B:
         #         A.next_node[.next_node]* = B
 

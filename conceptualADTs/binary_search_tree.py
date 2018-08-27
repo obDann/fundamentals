@@ -6,6 +6,15 @@ class BinaryNode():
 
         Initializes a Binary Node
         '''
+        # REPRESENTATION INVARIANT
+        # data holds data within the node
+        # left is a pointer to a BinaryNode or None
+        # right is a pointer to a BinaryNode or None
+
+        # just initialize our variables
+        self.data = data
+        self.left = left
+        self.righ = right
 
 
 class BinarySearchTree():
@@ -18,6 +27,11 @@ class BinarySearchTree():
         tree is less than the root, and the value to the right of the tree
         is greater than the root
         '''
+        # REPRESENTATION INVARIANT
+        # root is a BinaryNode at the very top of the tree or it is None
+        # for any node m in the tree:
+        #     m.left[.left|.right]* < m.data
+        #     m.right[.left|.right] >= m.data
 
     def add(self, value):
         '''
