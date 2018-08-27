@@ -435,5 +435,126 @@ class TestLinkedList(unittest.TestCase):
 
         self.assertRaises(BoundaryException, self.ll.get, -1)
 
+    def test_reverse_empty(self):
+        self.ll.reverse()
+        # test if the linked list is still empty
+        self.assertTrue(self.ll.is_empty())
+
+    def test_reverse_one_ele(self):
+        obj = "Obj!"
+        # put one object into our linked list
+        self.ll.append(obj)
+        # then reverse it
+        self.ll.reverse()
+        # we expect that there is still only one element in the linked list
+        expected_num_ele = 1
+
+        # get the object
+        actual_obj = self.ll.get(0)
+        # get the string representation
+        actual_str = self.ll.__str__()
+        # get the number of elements
+        actual_num_ele = self.ll.get_num_elements()
+
+        # now we can compare
+        self.assertEqual(actual_obj, obj)
+        self.assertEqual(actual_str, obj)
+        self.assertEqual(actual_num_ele, expected_num_ele)
+
+    def test_reverse_multiple(self):
+        first_obj = "one"
+        second_obj = 2
+        third_obj = "three"
+        fourth_obj = False
+
+        # put four objects into our linked list
+        self.ll.append(first_obj)
+        self.ll.append(second_obj)
+        self.ll.append(third_obj)
+        self.ll.append(fourth_obj)
+        # reverse our linked list
+        self.ll.reverse()
+
+        # we still expect that there are 4 elements
+        expected_num_ele = 4
+        # we make an expected string
+        expected_str = "False -> three -> 2 -> one"
+
+        # get the actual number of elements
+        actual_num_ele = self.ll.get_num_elements()
+        # get the string representation after reversing
+        actual_str = self.ll.__str__()
+        # and consequently, let's get the sequential elements
+        actual_first = self.ll.get(0)
+        actual_second = self.ll.get(1)
+        actual_third = self.ll.get(2)
+        actual_fourth = self.ll.get(3)
+
+        # test the string representation and the number of elements
+        self.assertEqual(actual_num_ele, expected_num_ele)
+        self.assertEqual(actual_str, expected_str)
+
+        # test symmetry
+        self.assertEqual(actual_first, fourth_obj)
+        self.assertEqual(actual_second, third_obj)
+        self.assertEqual(actual_third, second_obj)
+        self.assertEqual(actual_fourth, first_obj)
+
+    def test_append_after_reverse(self):
+        first_obj = "one"
+        second_obj = 2
+        third_obj = "three"
+        fourth_obj = False
+        # put four objects into our linked list
+        self.ll.append(first_obj)
+        self.ll.append(second_obj)
+        self.ll.append(third_obj)
+        self.ll.append(fourth_obj)
+        # reverse our linked list
+        self.ll.reverse()
+
+        new_obj = "new object!"
+        # append a new object to the linked list
+        self.ll.append(new_obj)
+        # and create an expected string representation
+        expected_str = "False -> three -> 2 -> one -> new object!"
+
+        # we can test by get
+        actual_obj = self.ll.get(4)
+        # we can test by the string representation too
+        actual_str = self.ll.__str__()
+
+        # compare the two objects
+        self.assertEqual(actual_obj, new_obj)
+        self.assertEqual(actual_str, expected_str)
+
+    def test_prepend_after_reverse(self):
+        first_obj = "one"
+        second_obj = 2
+        third_obj = "three"
+        fourth_obj = False
+        # put four objects into our linked list
+        self.ll.append(first_obj)
+        self.ll.append(second_obj)
+        self.ll.append(third_obj)
+        self.ll.append(fourth_obj)
+        # reverse our linked list
+        self.ll.reverse()
+
+        new_obj = "new object!"
+        # prepend a new object to the linked list
+        self.ll.prepend(new_obj)
+        # and create an expected string representation
+        expected_str = "new object! -> False -> three -> 2 -> one"
+
+        # we can test by get
+        actual_obj = self.ll.get(0)
+        # we can test by the string representation too
+        actual_str = self.ll.__str__()
+
+        # compare the two objects
+        self.assertEqual(actual_obj, new_obj)
+        self.assertEqual(actual_str, expected_str)
+
 if __name__ == '__main__':
     unittest.main(exit=False)
