@@ -17,30 +17,30 @@ class TestQueue(unittest.TestCase):
     def test_queue_empty_str(self):
         # make an expected string
         expected = "Queue is empty!"
-        # with our queue that we set up, test it's __str__ method
-        actual = self.generic_q.__str__()
+        # with our queue that we set up, test it's typecast to string
+        actual = str(self.generic_q)
         self.assertEqual(actual, expected)
 
     def test_enqueue_once(self):
-        # we're just going to aggregate the __str__ method
+        # we're just going to aggregate the typecase to string
         # so we make an expected string
         expected = "4\n---"
         # then we want to enqueue a 4 to the Queue
         self.generic_q.enqueue(4)
         # we make the actual string
-        actual = self.generic_q.__str__()
+        actual = str(self.generic_q)
         # then test the two
         self.assertEqual(actual, expected)
 
     def test_enqueue_twice(self):
-        # again, we're going to aggregate the __str__method
+        # again, we're going to aggregate the typecast to string
         # so we make an expected string
         expected = "4\n---\nThis is a string\n---"
         # and then we want to enqueue two items
         self.generic_q.enqueue(4)
         self.generic_q.enqueue("This is a string")
         # make the actual string
-        actual = self.generic_q.__str__()
+        actual = str(self.generic_q)
         # then test the two
         self.assertEqual(actual, expected)
 

@@ -20,7 +20,7 @@ class TestLinkedList(unittest.TestCase):
         # create an expected string
         expected = "Linked list is empty!"
         # get the actual string
-        actual = self.ll.__str__()
+        actual = str(self.ll)
         # compare the two
         self.assertEqual(actual, expected)
 
@@ -85,7 +85,7 @@ class TestLinkedList(unittest.TestCase):
         # we will test by using get
         actual_first = self.ll.get(0)
         # and a string representation
-        actual_second = self.ll.__str__()
+        actual_second = str(self.ll)
         # and the number of elements
         actual_num_ele = self.ll.get_num_elements()
 
@@ -115,7 +115,7 @@ class TestLinkedList(unittest.TestCase):
         # then get our actuals
         actual_first = self.ll.get(0)
         actual_second = self.ll.get(1)
-        actual_str = self.ll.__str__()
+        actual_str = str(self.ll)
         actual_num_ele = self.ll.get_num_elements()
 
         # compare objects
@@ -140,7 +140,7 @@ class TestLinkedList(unittest.TestCase):
         # we will test by using get
         actual_first = self.ll.get(0)
         # and a string representation
-        actual_second = self.ll.__str__()
+        actual_second = str(self.ll)
         # and the number of elements
         actual_num_ele = self.ll.get_num_elements()
 
@@ -170,7 +170,7 @@ class TestLinkedList(unittest.TestCase):
         # then get our actuals
         actual_first = self.ll.get(0)
         actual_second = self.ll.get(1)
-        actual_str = self.ll.__str__()
+        actual_str = str(self.ll)
         actual_num_ele = self.ll.get_num_elements()
 
         # compare objects
@@ -194,7 +194,7 @@ class TestLinkedList(unittest.TestCase):
 
         # we can test by get, string, and number of elements
         actual_first = self.ll.get(0)
-        actual_second = self.ll.__str__()
+        actual_second = str(self.ll)
         actual_num_ele = self.ll.get_num_elements()
 
         # so we compare the three
@@ -222,7 +222,7 @@ class TestLinkedList(unittest.TestCase):
         expected_str = "An obj -> one -> 2 -> three -> False"
 
         # so test by string
-        actual_str = self.ll.__str__()
+        actual_str = str(self.ll)
         # test by get
         actual_obj = self.ll.get(0)
         # test by number of elements
@@ -250,7 +250,7 @@ class TestLinkedList(unittest.TestCase):
         expected_str = "one -> 2 -> three -> False -> An obj"
 
         # so test by string
-        actual_str = self.ll.__str__()
+        actual_str = str(self.ll)
         # test by get
         actual_obj = self.ll.get(4)
         # test by number of elements
@@ -278,7 +278,7 @@ class TestLinkedList(unittest.TestCase):
         expected_str = "one -> 2 -> An obj -> three -> False"
 
         # so test by string
-        actual_str = self.ll.__str__()
+        actual_str = str(self.ll)
         # test by get
         actual_obj = self.ll.get(2)
         # test by number of elements
@@ -334,7 +334,7 @@ class TestLinkedList(unittest.TestCase):
 
         # get the actual number of objects and the actual string
         actual_num_objs = self.ll.get_num_elements()
-        actual_str = self.ll.__str__()
+        actual_str = str(self.ll)
 
         # generate comparisons
         self.assertEqual(actual_num_objs, expected_num_objs)
@@ -357,7 +357,7 @@ class TestLinkedList(unittest.TestCase):
 
         # get the actual number of objects and the actual string
         actual_num_objs = self.ll.get_num_elements()
-        actual_str = self.ll.__str__()
+        actual_str = str(self.ll)
 
         # generate comparisons
         self.assertEqual(actual_num_objs, expected_num_objs)
@@ -380,7 +380,7 @@ class TestLinkedList(unittest.TestCase):
 
         # get the actual number of objects and the actual string
         actual_num_objs = self.ll.get_num_elements()
-        actual_str = self.ll.__str__()
+        actual_str = str(self.ll)
 
         # generate comparisons
         self.assertEqual(actual_num_objs, expected_num_objs)
@@ -452,7 +452,7 @@ class TestLinkedList(unittest.TestCase):
         # get the object
         actual_obj = self.ll.get(0)
         # get the string representation
-        actual_str = self.ll.__str__()
+        actual_str = str(self.ll)
         # get the number of elements
         actual_num_ele = self.ll.get_num_elements()
 
@@ -483,7 +483,7 @@ class TestLinkedList(unittest.TestCase):
         # get the actual number of elements
         actual_num_ele = self.ll.get_num_elements()
         # get the string representation after reversing
-        actual_str = self.ll.__str__()
+        actual_str = str(self.ll)
         # and consequently, let's get the sequential elements
         actual_first = self.ll.get(0)
         actual_second = self.ll.get(1)
@@ -522,7 +522,7 @@ class TestLinkedList(unittest.TestCase):
         # we can test by get
         actual_obj = self.ll.get(4)
         # we can test by the string representation too
-        actual_str = self.ll.__str__()
+        actual_str = str(self.ll)
 
         # compare the two objects
         self.assertEqual(actual_obj, new_obj)
@@ -550,7 +550,7 @@ class TestLinkedList(unittest.TestCase):
         # we can test by get
         actual_obj = self.ll.get(0)
         # we can test by the string representation too
-        actual_str = self.ll.__str__()
+        actual_str = str(self.ll)
 
         # compare the two objects
         self.assertEqual(actual_obj, new_obj)

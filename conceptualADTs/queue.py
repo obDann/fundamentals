@@ -61,11 +61,11 @@ class Queue():
         if (curr_index == 0):
             # then we just return the string representation of the first
             # element
-            ret = self._q[curr_index].__str__() + "\n---"
+            ret = str(self._q[curr_index]) + "\n---"
         # RD: an arbitrary element
         else:
             # get the current (older) element's string representation
-            curr = self._q[curr_index].__str__() + "\n---"
+            curr = str(self._q[curr_index]) + "\n---"
             # decrement the index
             curr_index -= 1
             # then we want to get the newer elements to put below

@@ -58,12 +58,12 @@ class Stack():
         if (curr_index == len(self._stk) - 1):
             # if it is, then we return the string representation of that
             # only element
-            ret = self._stk[curr_index].__str__() + "\n---"
+            ret = str(self._stk[curr_index]) + "\n---"
         # RD: otherwise, we can assume that there is more than one element
         else:
             # get the string representation of the current element indicated
             # by the current index
-            curr_ele = self._stk[curr_index].__str__() + "\n---"
+            curr_ele = str(self._stk[curr_index]) + "\n---"
             # increment the current index
             curr_index += 1
             # then we want to get the rest of the stack

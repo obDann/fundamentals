@@ -26,7 +26,7 @@ class TestStack(unittest.TestCase):
         # make an expected output
         expected = "Stack is empty!"
         # get the actual output
-        actual = self.generic_stk.__str__()
+        actual = str(self.generic_stk)
         # check if the expected is equal to the actual
         self.assertEqual(actual, expected)
 
@@ -46,7 +46,7 @@ class TestStack(unittest.TestCase):
         # make an expected string
         expected = "Object!\n---"
         # then get the actual string
-        actual = self.generic_stk.__str__()
+        actual = str(self.generic_stk)
         # then test the equivalence of the two
         self.assertEqual(actual, expected)
 
@@ -74,7 +74,7 @@ class TestStack(unittest.TestCase):
         # create a string where the most recent object is on the top
         expected = "2\n---\nObject!\n---"
         # then get the actual string representation
-        actual = self.generic_stk.__str__()
+        actual = str(self.generic_stk)
         # test the equivalence of the two
         self.assertEqual(actual, expected)
 
@@ -118,7 +118,7 @@ class TestStack(unittest.TestCase):
         # create an expected string representation of the stack
         expected = "False\n---\n2\n---\nObject!\n---"
         # get the actual representation
-        actual = self.generic_stk.__str__()
+        actual = str(self.generic_stk)
         # check the equivalence of the two objects
         self.assertEqual(actual, expected)
 
