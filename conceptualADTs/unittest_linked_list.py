@@ -100,7 +100,7 @@ class TestLinkedList(unittest.TestCase):
     def test_append_twice(self):
         # create two objects to append
         first_obj = 44
-        second_boj = False
+        second_obj = False
 
         # append the two objects to our linked list
         self.ll.append(first_obj)
@@ -155,7 +155,7 @@ class TestLinkedList(unittest.TestCase):
     def test_prepend_twice(self):
         # create two objects to prepend
         first_obj = 44
-        second_boj = False
+        second_obj = False
 
         # prepend the two objects to our linked list
         self.ll.prepend(first_obj)
@@ -252,7 +252,7 @@ class TestLinkedList(unittest.TestCase):
         # so test by string
         actual_str = self.ll.__str__()
         # test by get
-        actual_obj = self.ll.get(0)
+        actual_obj = self.ll.get(4)
         # test by number of elements
         actual_num_ele = self.ll.get_num_elements()
 
@@ -280,7 +280,7 @@ class TestLinkedList(unittest.TestCase):
         # so test by string
         actual_str = self.ll.__str__()
         # test by get
-        actual_obj = self.ll.get(0)
+        actual_obj = self.ll.get(2)
         # test by number of elements
         actual_num_ele = self.ll.get_num_elements()
 
@@ -300,7 +300,8 @@ class TestLinkedList(unittest.TestCase):
         to_insert = "object!"
         # then attempt to insert the object with a bad index
         bad_index = -3
-        self.assertRaises(BoundaryException, self.ll.insert, obj, bad_index)
+        self.assertRaises(BoundaryException, self.ll.insert, to_insert,
+                          bad_index)
 
     def test_bad_index_insert_not_empty_high(self):
         # put four objects into our linked list
@@ -313,7 +314,8 @@ class TestLinkedList(unittest.TestCase):
         to_insert = "object!"
         # then attempt to insert the object with a bad index
         bad_index = 22
-        self.assertRaises(BoundaryException, self.ll.insert, obj, bad_index)
+        self.assertRaises(BoundaryException, self.ll.insert, to_insert,
+                          bad_index)
 
     def test_remove_beginning(self):
         # put four objects into our linked list
