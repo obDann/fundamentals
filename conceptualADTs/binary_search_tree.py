@@ -30,10 +30,11 @@ class BinarySearchTree():
         '''
         (BinaryTree, int) -> None
 
-        Removes the passed value
+        Removes the first instance of the passed value in the BinarySearchTree
+        through a pre-order traversal.
         '''
 
-    def preorder_traversal(self):
+    def preorder_traversal_str(self):
         '''
         (BinaryTree) -> String
 
@@ -41,7 +42,7 @@ class BinarySearchTree():
         BinaryTree
         '''
 
-    def inorder_traversal(self):
+    def inorder_traversal_str(self):
         '''
         (BinaryTree) -> String
 
@@ -49,7 +50,7 @@ class BinarySearchTree():
         BinaryTree
         '''
 
-    def postorder_traversal(self):
+    def postorder_traversal_str(self):
         '''
         (BinaryTree) -> String
 
