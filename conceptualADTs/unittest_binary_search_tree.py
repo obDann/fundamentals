@@ -359,12 +359,157 @@ class TestBinarySearchTree(unittest.TestCase):
         self.bst.add(52)
         # remove a leaf
         self.bst.remove(52)
+        expected = "10 20 30"
         actual = self.bst.preorder_traversal_str()
         self.assertEqual(actual, expected)
 
     def test_remove_root_crazy_tree(self):
-        # NTS: Right tree's most left value
-        None
+        # we want a tree similar to the following
+        #                      10
+        #                 /           \
+        #              7                 20
+        #           /     \           /     \
+        #         5         9       15       30
+        #          \      /       /   \
+        #           6    8       14   19
+
+        # Add them breadth-first
+        self.bst.add(10)
+        self.bst.add(7)
+        self.bst.add(20)
+        self.bst.add(5)
+        self.bst.add(9)
+        self.bst.add(15)
+        self.bst.add(30)
+        self.bst.add(6)
+        self.bst.add(8)
+        self.bst.add(14)
+        self.bst.add(19)
+
+        # remove the root
+        self.bst.remove(10)
+        # then we expect our tree to look like:
+        #                      14
+        #                 /           \
+        #              7                 20
+        #           /     \           /     \
+        #         5         9       15       30
+        #          \      /           \
+        #           6    8            19
+        # preorder traversal: VLR
+        expected = "14 7 5 6 9 8 20 15 19 30"
+        actual = self.bst.preorder_traversal_str()
+        self.assertEqual(actual, expected)
+
+    def test_remove_internal_one_child_crazy_tree(self):
+        # we want a tree similar to the following
+        #                      10
+        #                 /           \
+        #              7                 20
+        #           /     \           /     \
+        #         5         9       15       30
+        #          \      /       /   \
+        #           6    8       14   19
+        # Add them breadth-first
+        self.bst.add(10)
+        self.bst.add(7)
+        self.bst.add(20)
+        self.bst.add(5)
+        self.bst.add(9)
+        self.bst.add(15)
+        self.bst.add(30)
+        self.bst.add(6)
+        self.bst.add(8)
+        self.bst.add(14)
+        self.bst.add(19)
+
+        # remove an internal node where there is only one child
+        self.bst.remove(9)
+        # then we expect our tree to look like:
+        #                      14
+        #                 /           \
+        #              7                 20
+        #           /     \           /     \
+        #         5         8       15       30
+        #          \                  \
+        #           6                 19
+        # preorder traversal: VLR
+        expected = "14 7 5 6 9 8 20 15 19 30"
+        actual = self.bst.preorder_traversal_str()
+        self.assertEqual(actual, expected)
+
+    def test_remove_internal_two_children_crazy_tree(self):
+        # we want a tree similar to the following
+        #                      10
+        #                 /           \
+        #              7                 20
+        #           /     \           /     \
+        #         5         9       15       30
+        #          \      /       /   \
+        #           6    8       14   19
+        # Add them breadth-first
+        self.bst.add(10)
+        self.bst.add(7)
+        self.bst.add(20)
+        self.bst.add(5)
+        self.bst.add(9)
+        self.bst.add(15)
+        self.bst.add(30)
+        self.bst.add(6)
+        self.bst.add(8)
+        self.bst.add(14)
+        self.bst.add(19)
+
+        # then we want to remove a node that has two children
+        self.bst.remove(7)
+        # then we expect our tree to look like:
+        #                      10
+        #                 /           \
+        #              8                 20
+        #           /     \           /     \
+        #         5         9       15       30
+        #          \              /   \
+        #           6           14   19
+        expected = "10 8 5 6 9 20 15 14 19 30"
+        actual = self.bst.preorder_traversal_str()
+        self.assertEqual(actual, expected)
+
+    def test_remove_leaf_crazy_tree():
+        # we want a tree similar to the following
+        #                      10
+        #                 /           \
+        #              7                 20
+        #           /     \           /     \
+        #         5         9       15       30
+        #          \      /       /   \
+        #           6    8       14   19
+        # Add them breadth-first
+        self.bst.add(10)
+        self.bst.add(7)
+        self.bst.add(20)
+        self.bst.add(5)
+        self.bst.add(9)
+        self.bst.add(15)
+        self.bst.add(30)
+        self.bst.add(6)
+        self.bst.add(8)
+        self.bst.add(14)
+        self.bst.add(19)
+
+        # we can now remove a leaf
+        self.bst.remove(19)
+
+        # we expect the tree to be the following:
+        #                      10
+        #                 /           \
+        #              7                 20
+        #           /     \           /     \
+        #         5         9       15       30
+        #          \      /       /
+        #           6    8       14
+        expected = "10 7 5 6 9 8 20 15 14 30"
+        actual = self.bst.preorder_traversal_str()
+        self.assertEqual(actual, expected)
 
 if __name__ == '__main__':
     unittest.main(exit=False)
