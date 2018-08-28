@@ -108,3 +108,28 @@ class Queue():
         '''
         # as per our representation invariant, the queue is empty iff
         return self._q == []
+
+    def clear(self):
+        '''
+        (Queue) -> None
+
+        Empties the queue
+        '''
+        self._q = []
+
+    def peek(self):
+        '''
+        (Stack) -> obj
+
+        Returns the latest object that was enqueued in the queue, but does not
+        dequeue the object
+
+        RAISES QueueEmptyException when the queue is empty
+        '''
+        # check if the object is empty
+        if (self.is_empty()):
+            # if it is, then we want to raise an error
+            raise QueueEmptyException("Cannot peek as the Queue is empty")
+        # otherwise, we can just return our last element
+        last_ele_index = len(self._q) - 1
+        return self._q[last_ele_index]

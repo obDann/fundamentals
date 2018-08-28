@@ -83,5 +83,67 @@ class TestQueue(unittest.TestCase):
         self.assertEqual(actual_first, expected_first)
         self.assertEqual(actual_second, expected_second)
 
+    def test_clear_empty(self):
+        # clear an empty queue
+        self.generic_q.clear()
+        # check if the queue is empty
+        self.assertTrue(self.generic_q.is_empty())
+
+    def test_clear_after_one_enqueue(self):
+        # add one object to the queue
+        obj = "This is a string!"
+        self.generic_q.enqueue(obj)
+        # then clear the queue
+        self.generic_q.clear()
+        # check if the queue is empty
+        self.assertTrue(self.generic_q.is_empty())
+
+    def test_clear_after_three_enqueues(self):
+        # add three objects to the queue
+        first_obj = "This is a string"
+        second_obj = 2
+        third_obj = 4
+        self.generic_q.enqueue(first_obj)
+        self.generic_q.enqueue(second_obj)
+        self.generic_q.enqueue(third_obj)
+        # then clear the queue
+        self.generic_q.clear()
+        # check if the queue is empty
+        self.assertTrue(self.generic_q.is_empty())
+
+    def test_peek_empty(self):
+        # in this case, it is supposed to raise an exception
+        self.assertRaises(QueueEmptyException, self.generic_q.peek)
+
+    def test_peek_after_one_enqueue(self):
+        # add an expected object
+        expected = "a string"
+        # add it to the queue
+        self.generic_q.enqueue(expected)
+        # peek the queue
+        actual = self.generic_q.peek()
+
+        # compare the two objects
+        self.assertEqual(actual, expected)
+        # check if the queue is still not empty
+        self.assertFalse(self.generic_q.is_empty())
+
+    def test_peek_after_three_enqueues(self):
+        # add three objects to the queue
+        expected = "This is a string"
+        second_obj = 2
+        third_obj = 4
+        self.generic_q.enqueue(expected)
+        self.generic_q.enqueue(second_obj)
+        self.generic_q.enqueue(third_obj)
+
+        # peek the queue
+        actual = self.generic_q.peek()
+
+        # compare the two objects
+        self.assertEqual(actual, expected)
+        # check if the queue is still not empty
+        self.assertFalse(self.generic_q.is_empty())
+
 if __name__ == '__main__':
     unittest.main(exit=False)

@@ -109,3 +109,30 @@ class Stack():
         # just return our condition as stated from our representation
         # invariant
         return self._stk == []
+
+    def clear(self):
+        '''
+        (Stack) -> None
+
+        Empties the stack
+        '''
+        # just make the stack an empty list
+        self._stk = []
+
+    def peek(self):
+        '''
+        (Stack) -> obj
+
+        Returns the top of the stack without popping the object
+
+        RAISES StackEmptyException when the stack is empty
+        '''
+        # check if the stack is empty
+        if (self.is_empty()):
+            # if it is, then we want to raise an error
+            raise StackEmptyException("There are no elements in the stack"
+                                      + " to peek")
+        # otherwise, we can assume that there are elements to peek
+        # so we just return the last element
+        last_ele_index = len(self._stk) - 1
+        return self._stk[last_ele_index]

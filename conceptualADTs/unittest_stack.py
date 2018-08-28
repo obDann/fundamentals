@@ -154,5 +154,59 @@ class TestStack(unittest.TestCase):
             # then delete the first element in the expected list
             del expected_list[0]
 
+    def test_clear(self):
+        # clear the stack
+        self.generic_stk.clear()
+        # then test whether the stack is empty
+        self.assertTrue(self.generic_stk.is_empty())
+
+    def test_clear_after_one_push(self):
+        # add an object to the stack
+        self.generic_stk.push(self.first_obj)
+        # clear the stack
+        self.generic_stk.clear()
+        # then test whether the stack is empty
+        self.assertTrue(self.generic_stk.is_empty())
+
+    def test_clear_after_several_pushes(self):
+        # add three objects to the stack
+        self.generic_stk.push(self.first_obj)
+        self.generic_stk.push(self.second_obj)
+        self.generic_stk.push(self.third_obj)
+        # clear the stack
+        self.generic_stk.clear()
+        # then test whether the stack is empty
+        self.assertTrue(self.generic_stk.is_empty())
+
+    def test_peek_empty(self):
+        # check if an error is raised when the stack is empty
+        self.assertRaises(StackEmptyException, self.generic_stk.peek)
+
+    def test_peek_after_one_push(self):
+        expected = self.first_obj
+        # add an object to the stack
+        self.generic_stk.push(expected)
+        # get the object via peek
+        actual = self.generic_stk.peek()
+
+        # then we want to see if the objects are the same
+        self.assertEqual(actual, expected)
+        # and we want to know if the state of the object is still not empty
+        self.assertFalse(self.generic_stk.is_empty())
+
+    def test_peek_after_several_pushes(self):
+        expected = self.third_obj
+        # add three objects to the stack
+        self.generic_stk.push(self.first_obj)
+        self.generic_stk.push(self.second_obj)
+        self.generic_stk.push(expected)
+        # get the object via peek
+        actual = self.generic_stk.peek()
+
+        # then we want to see if the objects are the same
+        self.assertEqual(actual, expected)
+        # and we want to know if the state of the object is still not empty
+        self.assertFalse(self.generic_stk.is_empty())
+
 if __name__ == '__main__':
     unittest.main(exit=False)
