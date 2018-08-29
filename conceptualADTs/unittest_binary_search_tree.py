@@ -19,7 +19,7 @@ class TestBinarySearchTree(unittest.TestCase):
         # tree
         actual = self.bst.preorder_traversal_str()
         expected = "10"
-        self.assertEquals(actual, expected)
+        self.assertEqual(actual, expected)
 
     def test_add_two_preorder_left(self):
         # add the number 10 followed by the number 5 to the binary
@@ -29,7 +29,7 @@ class TestBinarySearchTree(unittest.TestCase):
         # by preorder (VLR), 10 should come before 5
         expected = "10 5"
         actual = self.bst.preorder_traversal_str()
-        self.assertEquals(actual, expected)
+        self.assertEqual(actual, expected)
 
     def test_add_two_inorder_left(self):
         # add the number 10 followed by the number 5 to the binary
@@ -39,7 +39,7 @@ class TestBinarySearchTree(unittest.TestCase):
         # by inorder (LVR), 5 should come before 10
         expected = "5 10"
         actual = self.bst.inorder_traversal_str()
-        self.assertEquals(actual, expected)
+        self.assertEqual(actual, expected)
 
     def test_add_two_postorder_left(self):
         # add the number 10 followed by the number 5 to the binary
@@ -49,7 +49,7 @@ class TestBinarySearchTree(unittest.TestCase):
         # by postorder (LRV), 5 should come before 10
         expected = "5 10"
         actual = self.bst.postorder_traversal_str()
-        self.assertEquals(actual, expected)
+        self.assertEqual(actual, expected)
 
     def test_add_two_preorder_right(self):
         # add the number 10 followed by the number 20 to the binary
@@ -59,7 +59,7 @@ class TestBinarySearchTree(unittest.TestCase):
         # by preorder (VLR), 10 comes before 20
         expected = "10 20"
         actual = self.bst.preorder_traversal_str()
-        self.assertEquals(actual, expected)
+        self.assertEqual(actual, expected)
 
     def test_add_two_inorder_right(self):
         # add the number 10 followed by the number 20 to the binary
@@ -69,7 +69,7 @@ class TestBinarySearchTree(unittest.TestCase):
         # by inorder (LVR), 10 comes before 20
         expected = "10 20"
         actual = self.bst.inorder_traversal_str()
-        self.assertEquals(actual, expected)
+        self.assertEqual(actual, expected)
 
     def test_add_two_postorder_right(self):
         # add the number 10 followed by the number 20 to the binary
@@ -79,7 +79,7 @@ class TestBinarySearchTree(unittest.TestCase):
         # by post order (LRV), 20 comes before 10
         expected = "20 10"
         actual = self.bst.postorder_traversal_str()
-        self.assertEquals(actual, expected)
+        self.assertEqual(actual, expected)
 
     def test_add_three_complete_tree_preorder(self):
         # add the number 10 followed by the numbers 20 and 5
@@ -89,7 +89,7 @@ class TestBinarySearchTree(unittest.TestCase):
         # by preorder (VLR), 10 comes first, followed by 5 then 20
         expected = "10 5 20"
         actual = self.bst.preorder_traversal_str()
-        self.assertEquals(actual, expected)
+        self.assertEqual(actual, expected)
 
     def test_add_three_complete_tree_inorder(self):
         # add the number 10 followed by the numbers 20 and 5
@@ -99,7 +99,7 @@ class TestBinarySearchTree(unittest.TestCase):
         # by inorder (LVR), 5 comes first, followed by 10 then 20
         expected = "5 10 20"
         actual = self.bst.inorder_traversal_str()
-        self.assertEquals(actual, expected)
+        self.assertEqual(actual, expected)
 
     def test_add_three_complete_tree_postorder(self):
         # add the number 10 followed by the numbers 20 and 5
@@ -109,7 +109,7 @@ class TestBinarySearchTree(unittest.TestCase):
         # by post order (LRV), 5 comes first, followed by 20 then 10
         expected = "5 20 10"
         actual = self.bst.postorder_traversal_str()
-        self.assertEquals(actual, expected)
+        self.assertEqual(actual, expected)
 
     def test_left_tree_preorder(self):
         # add the number 10 followed by the numbers 5 3 and 1
@@ -120,7 +120,7 @@ class TestBinarySearchTree(unittest.TestCase):
         # by preorder (VLR), the order goes as follows
         expected = "10 5 3 1"
         actual = self.bst.preorder_traversal_str()
-        self.assertEquals(actual, expected)
+        self.assertEqual(actual, expected)
 
     def test_left_tree_inorder(self):
         # add the number 10 followed by the numbers 5 3 and 1
@@ -131,7 +131,7 @@ class TestBinarySearchTree(unittest.TestCase):
         # by inorder (LVR), the order goes as follows
         expected = "1 3 5 10"
         actual = self.bst.inorder_traversal_str()
-        self.assertEquals(actual, expected)
+        self.assertEqual(actual, expected)
 
     def test_left_tree_postorder(self):
         # add the number 10 followed by the numbers 5 3 and 1
@@ -142,7 +142,7 @@ class TestBinarySearchTree(unittest.TestCase):
         # by postorder (LRV), the order goes as follows
         expected = "1 3 5 10"
         actual = self.bst.postorder_traversal_str()
-        self.assertEquals(actual, expected)
+        self.assertEqual(actual, expected)
 
     def test_right_tree_preorder(self):
         # add the number 10 followed by the numbers 20 30 500
@@ -153,7 +153,7 @@ class TestBinarySearchTree(unittest.TestCase):
         # by preorder (VLR), the order goes as follows
         expected = "10 20 30 500"
         actual = self.bst.preorder_traversal_str()
-        self.assertEquals(actual, expected)
+        self.assertEqual(actual, expected)
 
     def test_right_tree_inorder(self):
         # add the number 10 followed by the numbers 20 30 500
@@ -164,7 +164,7 @@ class TestBinarySearchTree(unittest.TestCase):
         # by inorder (LVR), the order goes as follows
         expected = "10 20 30 500"
         actual = self.bst.inorder_traversal_str()
-        self.assertEquals(actual, expected)
+        self.assertEqual(actual, expected)
 
     def test_right_tree_postorder(self):
         # add the number 10 followed by the numbers 20 30 500
@@ -175,7 +175,7 @@ class TestBinarySearchTree(unittest.TestCase):
         # by postorder (LRV), the order goes as follows
         expected = "500 30 20 10"
         actual = self.bst.postorder_traversal_str()
-        self.assertEquals(actual, expected)
+        self.assertEqual(actual, expected)
 
     def test_crazy_tree_preorder(self):
         # we want a tree similar to the following
@@ -267,36 +267,12 @@ class TestBinarySearchTree(unittest.TestCase):
         actual = self.bst.preorder_traversal_str()
         self.assertEqual(actual, expected)
 
-    def test_remove_one_element(self):
-        new_bst = BinarySearchTree()
-        # add an element from an empty BST
-        new_bst.add(7)
-        # then remove it
-        new_bst.remove(7)
-        expected = ""
-        actual = new_bst.preorder_traversal_str()
-        self.assertEqual(actual, expected)
-
     def test_remove_non_existant_element(self):
         # add an element from an empty BST
         self.bst.add(8)
         # then attempt to remove an element that is not in the BST
         self.bst.remove(7)
         expected = "8"
-        actual = self.bst.preorder_traversal_str()
-        self.assertEqual(actual, expected)
-
-    def test_remove_root_left_tree(self):
-        # add a few elements to make a left tree
-        self.bst.add(10)
-        self.bst.add(9)
-        self.bst.add(8)
-        self.bst.add(7)
-        # remove the root
-        self.bst.remove(10)
-
-        # we expect the tree's preorder to be as follows
-        expected = "9 8 7"
         actual = self.bst.preorder_traversal_str()
         self.assertEqual(actual, expected)
 
@@ -323,19 +299,6 @@ class TestBinarySearchTree(unittest.TestCase):
         # remove the leaf
         self.bst.remove(7)
         expected = "10 9 8"
-        actual = self.bst.preorder_traversal_str()
-        self.assertEqual(actual, expected)
-
-    def test_remove_root_right_tree(self):
-        # add a few elements to make a right tree
-        self.bst.add(10)
-        self.bst.add(20)
-        self.bst.add(30)
-        self.bst.add(52)
-
-        # remove the root
-        self.bst.remove(10)
-        expected = "20 30 52"
         actual = self.bst.preorder_traversal_str()
         self.assertEqual(actual, expected)
 
