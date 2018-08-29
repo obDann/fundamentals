@@ -19,7 +19,7 @@ class TestBinarySearchTree(unittest.TestCase):
         # tree
         actual = self.bst.preorder_traversal_str()
         expected = "10"
-        self.assertequals(actual, expected)
+        self.assertEquals(actual, expected)
 
     def test_add_two_preorder_left(self):
         # add the number 10 followed by the number 5 to the binary
@@ -57,7 +57,7 @@ class TestBinarySearchTree(unittest.TestCase):
         self.bst.add(10)
         self.bst.add(20)
         # by preorder (VLR), 10 comes before 20
-        expceted = "10 20"
+        expected = "10 20"
         actual = self.bst.preorder_traversal_str()
         self.assertEquals(actual, expected)
 
@@ -67,7 +67,7 @@ class TestBinarySearchTree(unittest.TestCase):
         self.bst.add(10)
         self.bst.add(20)
         # by inorder (LVR), 10 comes before 20
-        expceted = "10 20"
+        expected = "10 20"
         actual = self.bst.inorder_traversal_str()
         self.assertEquals(actual, expected)
 
@@ -256,7 +256,7 @@ class TestBinarySearchTree(unittest.TestCase):
         self.bst.add(14)
         self.bst.add(19)
         # by post order (LRV), the order goes as follows
-        expected = "6 5 8 9 7 14 19 15 30 20"
+        expected = "6 5 8 9 7 14 19 15 30 20 10"
         actual = self.bst.postorder_traversal_str()
         self.assertEqual(actual, expected)
 
@@ -268,12 +268,13 @@ class TestBinarySearchTree(unittest.TestCase):
         self.assertEqual(actual, expected)
 
     def test_remove_one_element(self):
+        new_bst = BinarySearchTree()
         # add an element from an empty BST
-        self.bst.add(7)
+        new_bst.add(7)
         # then remove it
-        self.bst.remove(7)
+        new_bst.remove(7)
         expected = ""
-        actual = self.bst.preorder_traversal_str()
+        actual = new_bst.preorder_traversal_str()
         self.assertEqual(actual, expected)
 
     def test_remove_non_existant_element(self):
@@ -426,15 +427,15 @@ class TestBinarySearchTree(unittest.TestCase):
         # remove an internal node where there is only one child
         self.bst.remove(9)
         # then we expect our tree to look like:
-        #                      14
+        #                      10
         #                 /           \
         #              7                 20
         #           /     \           /     \
         #         5         8       15       30
-        #          \                  \
-        #           6                 19
+        #          \               /  \
+        #           6             14  19
         # preorder traversal: VLR
-        expected = "14 7 5 6 9 8 20 15 19 30"
+        expected = "10 7 5 6 8 20 15 14 19 30"
         actual = self.bst.preorder_traversal_str()
         self.assertEqual(actual, expected)
 
@@ -474,7 +475,7 @@ class TestBinarySearchTree(unittest.TestCase):
         actual = self.bst.preorder_traversal_str()
         self.assertEqual(actual, expected)
 
-    def test_remove_leaf_crazy_tree():
+    def test_remove_leaf_crazy_tree(self):
         # we want a tree similar to the following
         #                      10
         #                 /           \
