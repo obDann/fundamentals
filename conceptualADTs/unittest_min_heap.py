@@ -18,7 +18,7 @@ class TestMinHeap(unittest.TestCase):
 
     def test_remove_on_empty(self):
         # check if the min heap raises an exception
-        self.assertRaises(self.mh, remove)
+        self.assertRaises(HeapEmptyException, self.mh.remove_min)
 
     def test_non_empty(self):
         # add one object to the heap
@@ -31,7 +31,7 @@ class TestMinHeap(unittest.TestCase):
         # create an expected obj
         expected = 55
         # then add it
-        self.mh.insert(obj)
+        self.mh.insert(expected)
         # remove it
         actual = self.mh.remove_min()
 
@@ -47,7 +47,7 @@ class TestMinHeap(unittest.TestCase):
         # add them
         self.mh.insert(expected_first)
         self.mh.insert(expected_second)
-        self.mh.insert(expected_thid)
+        self.mh.insert(expected_third)
 
         # ensure that it is not empty
         self.assertFalse(self.mh.is_empty())
@@ -58,13 +58,12 @@ class TestMinHeap(unittest.TestCase):
         actual_third = self.mh.remove_min()
 
         # ensure that the heap is empty
-        self.asserTrue(self.mh.is_empty())
+        self.assertTrue(self.mh.is_empty())
 
         # compare the objects we removed
         self.assertEqual(actual_first, expected_first)
         self.assertEqual(actual_second, expected_second)
         self.assertEqual(actual_third, expected_third)
-
 
     def test_add_sever_obj_not_queue(self):
         # insert several objects in a random order, but we create our obj
@@ -101,3 +100,5 @@ class TestMinHeap(unittest.TestCase):
         self.assertEqual(actual_fifth, 33)
         self.assertEqual(actual_sixth, 500)
 
+if __name__ == '__main__':
+    unittest.main(exit=False)
