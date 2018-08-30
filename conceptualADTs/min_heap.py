@@ -6,6 +6,9 @@ class HeapEmptyException(Exception):
 
 
 class MinHeap():
+    '''
+    A heap where the smallest value is contained on the root
+    '''
 
     def __init__(self):
         '''
@@ -26,7 +29,7 @@ class MinHeap():
 
     def insert(self, new_val):
         '''
-        (MinHeap, float) -> None
+        (MinHeap, obj) -> None
 
         Inserts an object to the MinHeap
         '''
@@ -39,7 +42,7 @@ class MinHeap():
 
     def remove_min(self):
         '''
-        (MinHeap) -> float
+        (MinHeap) -> obj
 
         Removes the smallest value in the heap
 

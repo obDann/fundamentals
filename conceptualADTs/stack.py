@@ -5,6 +5,9 @@ class StackEmptyException(Exception):
 
 
 class Stack():
+    '''
+    A container that abides by the concept of LIFO (Last-In, First_Out)
+    '''
 
     def __init__(self):
         '''

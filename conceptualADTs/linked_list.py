@@ -5,6 +5,9 @@ class BoundaryException(Exception):
 
 
 class Node():
+    '''
+    A node that contains data and a single pointer
+    '''
 
     def __init__(self, data, next=None):
         '''
@@ -54,6 +57,9 @@ class Node():
 
 
 class LinkedList():
+    '''
+    A sequential unary graph of objects
+    '''
 
     def __init__(self):
         '''

@@ -2,6 +2,9 @@ from stack import *
 
 
 class BinaryNode():
+    '''
+    A node that has two pointers; a left and a right
+    '''
 
     def __init__(self, data, left=None, right=None):
         '''
@@ -21,6 +24,11 @@ class BinaryNode():
 
 
 class BinarySearchTree():
+    '''
+    A Binary tree where for any node, n:
+
+    n.left.data < n.data <= n.right.data
+    '''
 
     def __init__(self):
         '''

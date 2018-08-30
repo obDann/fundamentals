@@ -5,6 +5,9 @@ class QueueEmptyException(Exception):
 
 
 class Queue():
+    '''
+    A simple container that abides by the concept of FIFO (First-In, First-Out)
+    '''
 
     def __init__(self):
         '''
