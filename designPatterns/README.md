@@ -7,7 +7,7 @@ A Design Pattern is described as a template/repeatable solution to common softwa
 
 [Command:](./Command) Treating classes as commands; the main responsibility of a command is to execute an action
 
-[Factory](./Factory) A descriptive abstraction of a constructor, allowing multiple ways to instantiate an object without guessing (i.e. multiple method overloads)
+[Factory](./Factory) A descriptive abstraction of a constructor, allowing multiple ways to instantiate an object without guessing the constructor's purpose
 
 [Iterator:](./Iterator) Allows clients to sequentially traverse through a collection of objects in a class
 
