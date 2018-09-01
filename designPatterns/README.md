@@ -50,7 +50,7 @@ In this case for encapsulation, it is best to use composition (Class B HAS-A Cla
 ### Scrum Methodology: Iterative incremental methodology
 
 **Product Backlog:** The master list of all functionalities desired in the project (typically from the client as a user story)  
-**Sprint Backlog:** The list of tasks that the scrum team is committing that they will complete in the current sprint. Items on the sprint backlog are re-drawn from the Product Backlog, and detailed into a smaller list of things needed to be done. 
+**Sprint Backlog:** The list of tasks that the scrum team is committing that they will complete in the current sprint. Items on the sprint backlog are re-drawn from the Product Backlog, and detailed into a smaller list of things needed to be done.  
 **Scrum Meetings:** Frequent meetings during the sprint that answers the following questions:
 * "What did you work on (yesterday)?"
 * "What will you work on (until the next scrum meeting)?"
