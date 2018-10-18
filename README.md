@@ -18,3 +18,6 @@ A collection of design patterns used in a software engineering basis. The collec
 
 ### [SQL [Jupyter and SQL]](./SQL)
 A wild bundle of items within SQL. SQL was taught in the [Business Data Analytics](https://utsc.calendar.utoronto.ca/course/mgod30h3) course and the [Introduction to Databases and Web Applications](https://utsc.calendar.utoronto.ca/course/cscb20h3) course. Foundationally, relational algebra is included. Will be revisiting when time is not scarce. I'm putting this on my github as a form of committing to brush up on SQL.
+
+### [Python Imports](./pythonImports)
+A basic how-to import guide in python
