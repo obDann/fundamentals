@@ -23,6 +23,6 @@
 
 ## Import a module from a specified directory
 import sys
-sys.path.insert(0, "./module")
+sys.path.insert(0, "./some_dir")
 from yay import *
 woohoo()
