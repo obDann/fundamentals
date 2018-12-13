@@ -3,17 +3,32 @@
 A Design Pattern is described as a template/repeatable solution to common software engineering problems.
 
 ### Design Patterns in this directory
-[Builder:](./Builder) A way to instantiate an object, injecting multiple attributes in a clear and concise way
+
+
+#### Behaviour Design Patterns: Focuses in communication among classes.
 
 [Command:](./Command) Treating classes as commands; the main responsibility of a command is to execute an action
-
-[Factory](./Factory) A descriptive abstraction of a constructor, allowing multiple ways to instantiate an object without guessing the constructor's purpose
 
 [Iterator:](./Iterator) Allows clients to sequentially traverse through a collection of objects in a class
 
 [Publish Subscribe:](./publishSubscribe) Allows many objects to automatically react when behaviour of an observable changes
 
+
+#### Creational Design Patterns: Focuses in class instantiation.
+
+[Builder:](./Builder) A way to instantiate an object, injecting multiple attributes in a clear and concise way
+
+[Factory](./Factory) A descriptive abstraction of a constructor, allowing multiple ways to instantiate an object without guessing the constructor's purpose
+
 [Singleton:](./Singleton) Global access to a class that has only one reference
+
+#### Structural Design Patterns: Focuses in organizing small pieces to generate large structures.
+
+[Adapter:](./Adapter) Lets an object make a request with incompatible (but fully implemented) resources injected into it.
+
+[Composite:](./Composite) Allows components to hold objects of its interface.
+
+[Decorator:](./Decorator) A core object that can have additional properties with each layer.
 
 ---
 
