@@ -11,7 +11,9 @@ A Design Pattern is described as a template/repeatable solution to common softwa
 
 [Iterator:](./Iterator) Allows clients to sequentially traverse through a collection of objects in a class
 
-[Publish Subscribe:](./publishSubscribe) Allows many objects to automatically react when behaviour of an observable changes
+[Publish Subscribe:](./PublishSubscribe) Allows many objects to automatically react when behaviour of an observable changes
+
+[Null Object:](./NullObject) Avoid checking for nulls in your structure by making your own null object
 
 
 #### Creational Design Patterns: Focuses in class instantiation.
@@ -22,13 +24,13 @@ A Design Pattern is described as a template/repeatable solution to common softwa
 
 [Singleton:](./Singleton) Global access to a class that has only one reference
 
-#### Structural Design Patterns: Focuses in organizing small pieces to generate large structures.
+#### Structural Design Patterns: Focuses in organizing small pieces to generate large structures
 
-[Adapter:](./Adapter) Lets an object make a request with incompatible (but fully implemented) resources injected into it.
+[Adapter:](./Adapter) Lets an object make a request with incompatible (but fully implemented) resources injected into it
 
-[Composite:](./Composite) Allows an object hold other objects of its interface. The example is further extended on a [project I worked on](https://github.com/obDann/project-archive/tree/master/JShell).
+[Composite:](./Composite) Allows an object hold other objects of its interface. The example is further extended on a [project I worked on](https://github.com/obDann/project-archive/tree/master/JShell)
 
-[Decorator:](./Decorator) A core object that can have additional properties with each layer.
+[Decorator:](./Decorator) A core object that can have additional properties with each layer
 
 ---
 
