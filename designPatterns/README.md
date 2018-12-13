@@ -26,7 +26,7 @@ A Design Pattern is described as a template/repeatable solution to common softwa
 
 [Adapter:](./Adapter) Lets an object make a request with incompatible (but fully implemented) resources injected into it.
 
-[Composite:](./Composite) Allows components to hold objects of its interface.
+[Composite:](./Composite) Allows an object hold other objects of its interface. The example is further extended on a [project I worked on](https://github.com/obDann/project-archive/tree/master/JShell).
 
 [Decorator:](./Decorator) A core object that can have additional properties with each layer.
 
