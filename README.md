@@ -13,7 +13,7 @@ Known abstract data types,  typically used in further theory in computer science
 A collection of popular sorts that orders a list of comparable objects from smallest to largest; introduction to Big-Oh notation
 
 ### [Design Patterns [Java]](./designPatterns)
-A collection of design patterns used in a software engineering basis. The collection of design patterns as the time I am writing this (September 2018) only consists of design patterns taught in the [Software Design](https://utsc.calendar.utoronto.ca/course/cscb07h3) course
+A collection of design patterns used in a software engineering basis. The collection of design patterns consists of design patterns taught in the [Software Design](https://utsc.calendar.utoronto.ca/course/cscb07h3) course and the [Introduction to Software Engineering](https://github.com/ThierrySans/CSCC01) course
 
 
 ### [SQL [Jupyter and SQL]](./SQL)
