@@ -1,5 +1,45 @@
-# peak finding
+def one_dim_peak_find_slower(given_list):
+  '''
+  (list of ints) -> int
 
+  Given a list, return the peak of the list
+
+  A peak is defined such that L[i] >= L[i+1] and L[i] >= L[i-1]
+
+  if i == 0 and the length of L is greater than 1,
+  then L has a peak when L[i] >= L[i+1]
+
+  if i == len(L) - 1 and the length of L is greater than 1, then L has a peak
+  when L[i] >= L[i-1]
+
+  if len(L) == 1, then the list is a peak
+  '''
+  # we consider a few base cases
+  # if the list does not have any elements, return None
+  if (given_list == []):
+    return None
+  # if the list has one element then we return 0
+  if (len(given_list) == 1):
+    return 0
+  # if the list has two elements, then we can pick the higher valued index
+  if (len(given_list) == 2):
+    if given_list[0] >= given_list[1]:
+      return 0
+    else:
+      return 1
+  else:
+    # otherwise, we can assume that there are more than two elements
+    # there are two base cases; first element is greater than the second
+    if (given_list[0] >= given_list[1]):
+      return 0
+    # the other base case is if the second is greater than both first and
+    # third
+    if (given_list[1] >= given_list[0]) and (given_list[1] >= given_list[2]):
+      return 1
+    # otherwise, we remove the first two elements, and recursively
+    # figure it out
+    else:
+      return 2 + one_dim_peak_find_slower(given_list[2:])
 
 def one_dim_peak_find_faster(given_list):
   '''
@@ -66,3 +106,10 @@ if __name__ == "__main__":
   print(one_dim_peak_find_faster(L9))
   print(one_dim_peak_find_faster(L10))
   print(one_dim_peak_find_faster(L11))
+  print(one_dim_peak_find_faster(L8))
+  print("-------------------")
+  print(one_dim_peak_find_slower(L9)) # return 2
+  print(one_dim_peak_find_slower(L10)) # return 12
+  print(one_dim_peak_find_slower(L11)) # return 10
+  print(one_dim_peak_find_slower(L8)) # return 2
+
