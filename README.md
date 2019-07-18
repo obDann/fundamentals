@@ -12,12 +12,12 @@ Known abstract data types,  typically used in further theory in computer science
 ### [Sorts [Python]](./sorts)
 A collection of popular sorts that orders a list of comparable objects from smallest to largest; introduction to Big-Oh notation
 
-### [Design Patterns [Java]](./designPatterns)
-A collection of design patterns used in a software engineering basis. The collection of design patterns consists of design patterns taught in the [Software Design](https://utsc.calendar.utoronto.ca/course/cscb07h3) course and the [Introduction to Software Engineering](https://github.com/ThierrySans/CSCC01) course
+### [Design Patterns [Java]](./design)
+A collection of design concepts (including SOLID and Agile Methodology) and design patterns used in a software engineering basis. The collection of design patterns consists of design patterns taught in the [Software Design](https://utsc.calendar.utoronto.ca/course/cscb07h3) course and the [Introduction to Software Engineering](https://github.com/ThierrySans/CSCC01) course
 
 
-### [SQL [Jupyter and SQL]](./SQL)
-A wild bundle of items within SQL. SQL was taught in the [Business Data Analytics](https://utsc.calendar.utoronto.ca/course/mgod30h3) course and the [Introduction to Databases and Web Applications](https://utsc.calendar.utoronto.ca/course/cscb20h3) course. Foundationally, relational algebra is included. Will be revisiting when time is not scarce. I'm putting this on my github as a form of committing to brush up on SQL.
+### [SQL [Python and SQL]](./SQL)
+A collection of items pertaining to SQL, Relational Algebra, and common statistical definitions for the field of Data Science. SQL was taught in the [Business Data Analytics](https://utsc.calendar.utoronto.ca/course/mgod30h3) course and the [Introduction to Databases and Web Applications](https://utsc.calendar.utoronto.ca/course/cscb20h3) course.
 
 ### [Python Imports](./pythonImports)
-A basic how-to import guide in python
+A basic how-to import guide in Python
