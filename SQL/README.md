@@ -40,7 +40,7 @@ A collection of items pertaining to SQL, Relational Algebra, and common statisti
 
 # Relational Algebra Operators
 
-**Selection:** <img src="http://www.sciweavers.org/tex2img.php?eq=%24%5Csigma_p%28x%29%24&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="$\sigma_p(x)$" width="47" height="21"/>
+**Selection:** $\sigma_p(x)$
 
 Get specific tuples if it fulfills a predicate
 
@@ -50,25 +50,25 @@ Get specific tuples if it fulfills a predicate
   * <, >, <=, >=, =, !=
 * x is a relation
 
-**Projection:** <img src="http://www.sciweavers.org/tex2img.php?eq=%24%5Cpi_%7Ba_1%2C%20a_2...a_n%7D%28x%29%24&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="$\pi_{a_1, a_2...a_n}(x)$" width="103" height="19" />
+**Projection:** $pi_{a_1, a_2... a_n}(x)$
 
 * a_i are the only attributes selected from the relation
 * x is a relation
 
-**Cartesian Product:**  <img src="http://www.sciweavers.org/tex2img.php?eq=R1%24%5Ctimes%24R2&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="R1$\times$R2" width="61" height="17" />
+**Cartesian Product:** $R1 \times R2$
 
 Repeat all of R1 with each row of R2, with R2's attributes added to R1's relation
 
-**Theta-Join:** <img src="http://www.sciweavers.org/tex2img.php?eq=R1%24%5Cbowtie_p%24R2&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="R1$\bowtie_p$R2" width="72" height="21" />
+**Theta-Join:** $R1 \bowtie_p R2$
 
-* Take the product of <img src="http://www.sciweavers.org/tex2img.php?eq=R1%24%5Ctimes%24R2&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="R1$\times$R2" width="61" height="17" />
-* Then apply <img src="http://www.sciweavers.org/tex2img.php?eq=%24%5Csigma_p%28x%29%24&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="$\sigma_p(x)$" width="47" height="21"/> to the result
+* Take the product of $R1 \times R2$
+* Then apply $\sigma_p(x)$ to the result
 
-**Natural Join:** <img src="http://www.sciweavers.org/tex2img.php?eq=R1%24%5Cbowtie%24R2&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="R1$\bowtie$R2" width="62" height="15" />
+**Natural Join:** $R1 \bowtie R2$
 
 Combine two relations into a single relation; tuples are joined if there is at least one common attribute (that has the same name). Anagolous to a theta join, the selection predicate is if all common attributes are equal to each other
 
-**Renaming:** <img src="http://www.sciweavers.org/tex2img.php?eq=%24%5Crho_%7Bold%5Crightarrow%20new%7D%28x%29%2C%20%5Crho_%7Bs%7D%28x%29%24&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="$\rho_{old\rightarrow new}(x), \rho_{s}(x)$" width="153" height="19" />
+**Renaming:** $\rho_{old \rightarrow new}(x), \rho_{s}(x)$
 
 Changes attribute `old` to attribute `new` in the relation OR returns the relation x with `s.` prefacing it
 
@@ -80,11 +80,11 @@ Given relations R1 and R2, the following are properties are needed for bag opera
 * R1 and R2 must have the same attribute names
 * Attribute domains must be compatible (i.e. same type of value)
 
-**Union:** <img src="http://www.sciweavers.org/tex2img.php?eq=R1%24%5Ccup%24R2&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="R1$\cup$R2" width="60" height="15" />
+**Union:** **R1 U R2**
 
 Uniquely adds R2 tuples to R1. Commutative (i.e. add R1 tuples to R2)
 
-**Difference:**  <img src="http://www.sciweavers.org/tex2img.php?eq=R1%20%24-%24%20R2&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="R1 $-$ R2" width="54" height="15" />
+**Difference:**  **R1 - R2**
 
 Remove any R1 tuples that R2 has. Not commutative or associative
 
