@@ -94,7 +94,9 @@ After or during each sprint, the following are supposed to be used to track prog
 
 **Inheritance**: "IS-A" relationship between two classes
 
-**Composition**: "HAS-A" relationship between two classes
+**Association**: "HAS-A" relationship between two classes
+
+**Composition**: "PART-OF" relationship between two classes
 
 **CRC (Class Responsibility Collaborator):** A tool used to enforce the Single Responsibility Principle; three main questions exists:
 * What is my class
