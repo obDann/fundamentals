@@ -62,6 +62,16 @@ In this case for encapsulation, it is best to use composition (Class B HAS-A Cla
 * **Dependency Injection:** When a class that is contracted by an interface, an instantiation of the contracted class is passed into another object's parameters to replicate dependent behaviour, allowing objects to be loosely coupled
 * **Mock Object:** An instantiation of a class that is contracted by an interface, mocking the behaviour of a class that is yet to be implemented in a very small scale. Mock objects are mainly used in dependency injection for unit testing
 
+# Four Pillars in OOP (Object Oriented Programming)
+
+**Inheritance**: Suppose class A inherits from class B. Class A can be classified as class B, and at the same time, class A has class B's protected/public methods without any further implementation.
+
+**Polymorphism**: The idea that classes A and B either implements/extends and interface/class C; class A and B is contracted to have methods that class/interface C states (but can be uniquely implmented). The following relationships are heavily emphasized in polymorphism: A IS-A C and B IS-A C. With static languages, A and B can be passed into a parameter as a C, or even held into a collection of items as C. Likewise, since the client knows C's methods, the client expects that C's methods are possessed in A and B.
+
+**Encapsulation**: Separating the implementation details from the behaviour exposed to clients; heavy emphasis on what should be private/protected/public so that internal objects are rightfully (im)mutable.
+
+**Abstraction**: The client does not care about the functionality of the class, but the client cares about the functionality of the class(' methods).
+
 # Agile Methodology
 
 Agile methodology usually consists of the following:
@@ -90,15 +100,17 @@ After or during each sprint, the following are supposed to be used to track prog
 
 # Definitions and other tools worth noting
 
-**Encapsulation**: Separating the implementation details from the behaviour exposed to clients
-
 **Inheritance**: "IS-A" relationship between two classes
 
 **Association**: "HAS-A" relationship between two classes
 
 **Composition**: "PART-OF" relationship between two classes
 
+**Difference between Association and Composition**: Suppose class A and class B are two independent classes
+  * Association: let class A use class B through injection (class B is already instantiated)
+  * Composition: Instantiate class B inside class A
+
 **CRC (Class Responsibility Collaborator):** A tool used to enforce the Single Responsibility Principle; three main questions exists:
-* What is my class
+* What is my class?
 * What responsibilities does my class have?
 * What is my class collaborating with?
